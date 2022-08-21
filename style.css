@@ -8,7 +8,7 @@
     --border: .2rem solid rgba(0,0,0, .1);
     --outline: .1rem solid rgba(0,0,0, .1);
     --outline-hover: .2rem solid var(--black);
-    font-size: 10px;
+    font-size: 62.5%;
 }
 
 * {
@@ -35,6 +35,11 @@ body {
     background-color: #eee;
 }
 
+section {
+    padding: 2rem 9%;
+
+}
+
 .btn {
     margin-top: 1rem;
     display: inline-block;
@@ -44,6 +49,7 @@ body {
     border: .2rem solid var(--black);
     color: var(--black);
     cursor: pointer;
+    background-color: none;
 }
 
 .btn:hover {
@@ -216,6 +222,157 @@ body {
     display: block;
     text-align: center;
     margin: 1rem;
+}
+
+.header .login-form {
+    position: absolute;
+    top: 110%;
+    right: -100%;
+    width: 32rem;
+    box-shadow: var(--box-shadow);
+    padding: 2rem;
+    border-radius: .5rem;
+    background: #fff;
+    text-align: center;
+}
+
+.header .login-form.active {
+    right: 2rem;
+    transition: .2 linear;
+}
+
+.header .login-form h3 {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    color: black;
+    
+}
+
+.header .login-form .box{
+    width: 100%;
+    margin:  .7rem 0;
+    background: #eee;
+    border-radius: .5rem;
+    padding: 1rem;
+    font-style: 1.6rem;
+    color: var(--black);
+    text-transform: none;
+    
+}
+
+.header .login-form p {
+    font-size: 1.4rem;
+    padding:  .5rem 0;
+    color: var(--light-color);
+}
+
+.header .login-form p a {
+    color: var(--orange);
+    text-decoration: underline;
+}
+
+.home {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url("./img/main_bg.jpg") no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding-top: 23rem;
+    padding-bottom: 15rem;
+    position: relative;
+}
+
+.home .content {
+    text-align: center;
+    width: 60rem;
+}
+
+.home .content h3 {
+    font-size: 3rem;
+    color: var(--black);
+    text-shadow: rgb(255, 255, 255) 1px 2px 15px;
+}
+
+.home .content h3 span{
+    color: orange;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* media queries */
+@media screen and (max-width: 991px) {
+    html {
+        font-size: 55%;
+    }
+
+    .header {
+        padding: 2rem;
+    }
+    
+}
+
+@media screen and (max-width: 768px) {
+    #menu-btn {
+        display: inline-block;
+    }
+
+    .header .search-form {
+        width: 90%;
+    }
+
+    .header .navbar {
+        position: absolute;
+        top: 110%;
+        right: -110%;
+        width: 30rem;
+        box-shadow: var(--box-shadow);
+        border-radius: .5rem;
+        background: #fff;
+    }
+
+    .header .navbar.active {
+        right: 2rem;
+        transition: .2s linear;
+    }
+
+    .header .navbar a {
+        font-size: 2rem;
+        margin: 2rem 2.5rem;
+        display: block;
+    }
+    
+}
+
+@media screen and (max-width: 450px) {
+    html {
+        font-size: 50%;
+    }
+    
 }
 
 
